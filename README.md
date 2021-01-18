@@ -8,11 +8,21 @@ The world fastest Javascript unique string generator.
 
 Folk and run the benchmark to compare this library with other identical libraries
 
+### Version 1.1.0
+
+While-loop;String;Memoized
+
+**6,547,943 ops/sec ±1.61% (77 runs sampled)**
+
 ### Version 1.0.0
+
+Recursion;String;Memoized
 
 **3,894,252 ops/sec ±1.28% (78 runs sampled)**
 
 ### Version 0.1.0
+
+Recursion;Array;No memoize
 
 994,451 ops/sec ±2.39% (77 runs sampled)
 
