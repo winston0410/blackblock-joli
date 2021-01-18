@@ -24,7 +24,7 @@ suite.add('Function JKY', function() {
 
 const nextJKY2 = require('./cases/functionWithJKY.js')(charList, 0)
 
-suite.add('Function JKY; custom memo', function() {
+suite.add('Function JKY; custom memo(Version 1.1.0)', function() {
 	const id = nextJKY2()
 })
 

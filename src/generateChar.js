@@ -1,25 +1,19 @@
 'use strict'
 function generateChar(chars, currentPass, cache) {
 	let str = ''
+	let passingCount = currentPass
 
-	const recursion = (passingCount) => {
-		if (passingCount < chars.length) {
-			const result = chars[passingCount] + str
-			cache[currentPass] = result
-			return result
-		}
-
+	while (passingCount >= chars.length) {
 		if (cache[passingCount]) {
 			return cache[passingCount] + str
 		}
-
-		const charIndex = Math.floor(passingCount / chars.length) - 1
 		const remainder = passingCount % chars.length
+		passingCount = (passingCount - remainder) / chars.length - 1
 		str = chars[remainder] + str
-		return recursion(charIndex)
 	}
 
-	return recursion(currentPass)
+	cache[currentPass] = chars[passingCount] + str
+	return chars[passingCount] + str
 }
 
 module.exports = generateChar

@@ -1,17 +1,18 @@
 function generateChar(chars, currentPass, cache) {
-    let str = ''
-    let passingCount = currentPass
-    
-    while (passingCount >= chars.length) {
-        if (cache[passingCount]) {
-            return cache[passingCount] + str
-        }
+	let str = ''
+	let passingCount = currentPass
+
+	while (passingCount >= chars.length) {
+		if (cache[passingCount]) {
+			return cache[passingCount] + str
+		}
 		const remainder = passingCount % chars.length
 		passingCount = (passingCount - remainder) / chars.length - 1
-        str = chars[remainder] + str
-    }
-    
-	return cache[currentPass] = chars[passingCount] + str
+		str = chars[remainder] + str
+	}
+
+	cache[currentPass] = chars[passingCount] + str
+	return chars[passingCount] + str
 }
 
 function generator(symbol, index = 0) {
