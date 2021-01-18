@@ -10,3 +10,6 @@ path = "src/rust/index.rs"
 
 [dependencies]
 wasm-bindgen = "0.2.69"
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-Oz", "--enable-mutable-globals"]

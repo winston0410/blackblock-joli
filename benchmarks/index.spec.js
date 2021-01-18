@@ -15,6 +15,11 @@ const charList = 'abcd'
 // 	const id = next()
 // })
 //
+const rustNext = require('../src/rust/index.js')(charList, 0)
+
+suite.add('Wasm from Rust', function() {
+	const id = rustNext()
+})
 
 const nextJKY = require('./cases/functionWithJKY.js')(charList, 0)
 

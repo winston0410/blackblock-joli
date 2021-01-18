@@ -1,6 +1,6 @@
-
 // import joli from '../src/index'
-import joli from '../benchmarks/cases/functionWithJKYAndCustomMemo'
+// import joli from '../benchmarks/cases/functionWithJKYAndCustomMemo'
+import joli from '../src/rust/index.js'
 const chai = require('chai')
 const expect = chai.expect
 const R = require('ramda')

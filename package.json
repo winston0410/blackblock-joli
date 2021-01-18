@@ -22,7 +22,7 @@
 		"test": "npx mocha --recursive './tests/**/*.js' --require esm",
 		"benchmark": "node -r esm ./benchmarks/index.spec.js",
 		"build": "node build.js",
-		"build:rust": "wasm-pack build --out-name index --out-dir wasm",
+		"build:rust": "wasm-pack build --out-name index --out-dir wasm --target nodejs",
 		"prepublish": "yarn build"
 	},
 	"dependencies": {
