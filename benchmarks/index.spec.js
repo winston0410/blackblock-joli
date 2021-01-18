@@ -15,8 +15,21 @@ const charList = 'abcd'
 // 	const id = next()
 // })
 //
+
+const nextJKY = require('./cases/functionWithJKY.js')(charList, 0)
+
+suite.add('Function JKY', function() {
+	const id = nextJKY()
+})
+
+const nextJKY2 = require('./cases/functionWithJKY.js')(charList, 0)
+
+suite.add('Function JKY; custom memo', function() {
+	const id = nextJKY2()
+})
+
 const next2 = require('./cases/functionWithStringConcat.js')(charList, 0)
-//
+
 suite.add('Function generator; concat string for result', function() {
 	const id = next2()
 })
